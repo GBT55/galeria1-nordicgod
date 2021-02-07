@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+body{
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-position:center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: rgb(252, 134, 0);
+    background-color: whitesmoke;
+}
+
+
+
+.linea{
+    border-top: 5px solid rgb(255, 115, 0);
+    margin-bottom: 5%;
+}
+
+.contenedor_imagenes{
+    display: flex ;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    width: 80%;
+    
+}
+
+.contenedor_imagenes .image{
+    width:300px;
+    height:400px;
+    position: relative;
+    margin: 50px;
+    box-shadow: 0px 0px 5px 2px rgb(252, 134, 0);
+    
+    
+}
+.image img{
+    width:300px;
+    height:400px;
+    object-fit: cover;
+}
+
+
+.overlay{
+    position: absolute;
+    bottom: 0px;
+    background:rgba(255, 255, 255, 0.5);
+    /**height: 20%;
+    width:78%;**/
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    border: 2px solid black;
+    transition: 500ms ease-in-out ;
+   
+   
+}
+
+.image:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+    
+    
+}
+
+.overlay h2{
+    color: rgb(0, 0, 0);
+    font-weight: 300px;
+    position: absolute;
+    transform: translate(-50%, -50%) ;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+}
+.diosito{
+    font-size: 25px;
+   
+}
+
+.overlay h3{
+    font-weight: 100px;
+    position: relative;
+    color: rgb(88, 0, 252);
+    display:none;
+    transform: translate(-50%, -50%);
+    width: 90%;
+ 
+}
+
+.image:hover .overlay h2{
+    top: 10%;
+}
+.image:hover .overlay h3{
+    display: block;  
+    left:50%;
+    top: 50%; 
+    
+}
+
+
+
+
+@media screen and (max-width: 1000px){
+    .contenedor_imagenes{
+        width: 95%;
+         
+     }
+    .contenedor_imagenes .image{
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 650px){
+    .contenedor_imagenes .image{
+        width:200px;
+        height:300px;
+        margin-bottom: 30px;
+        margin: 10px;
+    }
+    .image img{
+        width:200px;
+        height:300px;
+    }
+
+    .overlay h2{
+        font-size: 18px;
+    }
+    .overlay h3{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 450px){
+    .contenedor_imagenes .image{
+        width:150px;
+        height:250px;
+        margin: 10px;
+        margin-bottom: 30px;
+    }
+    .image img{
+        width:150px;
+        height:250px;
+    }
+    .overlay h2{
+        font-size: 15px;
+    }
+    .overlay h3{
+        font-size: 12px;
+    }
+   
+}
